@@ -114,6 +114,8 @@ After=network.target
 Environment=NODE_ENV=production
 Type=notify
 ExecStart=/usr/bin/node index.js
+# If you install Node.js uusing snap the line needs to be
+#ExecStart=/snap/bin/node index.js
 WorkingDirectory=/opt/zigbee2mqtt
 StandardOutput=inherit
 # Or use StandardOutput=null if you don't want Zigbee2MQTT messages filling syslog, for more options see systemd.exec(5)
